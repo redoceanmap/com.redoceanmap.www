@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     const responseText = result.response.text();
 
     // 4. 결과를 클라이언트에 반환
-    return NextResponse.json({ text: responseText });
+    return NextResponse.json({ text: responseText, recommendations: [] });
 
   } catch (error) {
     console.error("Gemini API Error:", error);
