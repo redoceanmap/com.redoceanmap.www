@@ -5,6 +5,7 @@ import BottomTabBar from "@/components/seoul/BottomTabBar";
 import AuthModal from "@/components/seoul/AuthModal";
 import AuthProvider from "@/components/seoul/AuthProvider";
 
+
 export const metadata: Metadata = {
   title: "redoceanmap — 서울 상권 분석",
   description: "예산이랑 업종만 알려주세요. 괜찮은 동네 골라드릴게요.",
