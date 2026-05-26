@@ -1,8 +1,13 @@
+"use client";
+
 import Link from "next/link";
+import { useChatStore } from "@/lib/store";
 
 export default function Wordmark() {
+  const reset = useChatStore((s) => s.reset);
+
   return (
-    <Link href="/" className="flex items-center gap-2 text-foreground">
+    <Link href="/" onClick={reset} className="flex items-center gap-2 text-foreground">
       <svg
         width="16"
         height="20"
