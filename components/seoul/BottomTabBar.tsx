@@ -14,6 +14,8 @@ const tabs = [
 export default function BottomTabBar() {
   const pathname = usePathname();
 
+  if (pathname?.startsWith("/admin")) return null;
+
   return (
     <nav
       className="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-t border-border"

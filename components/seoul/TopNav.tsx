@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Plus, MessageSquare, MapPin, Bookmark } from "lucide-react";
 import Wordmark from "./Wordmark";
 import { useUIStore } from "@/lib/uiStore";
@@ -14,10 +15,13 @@ const navItems = [
 ];
 
 export default function TopNav() {
+  const pathname = usePathname();
   const openAuth = useUIStore((s) => s.openAuth);
   const user = useUIStore((s) => s.user);
   const logoutStore = useUIStore((s) => s.logout);
   const logout = () => { clearStoredToken(); logoutStore(); };
+
+  if (pathname?.startsWith("/admin")) return null;
 
   return (
     <header className="h-14 flex items-center px-6 gap-8">
