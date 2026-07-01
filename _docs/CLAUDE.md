@@ -1,6 +1,6 @@
 # CLAUDE.md — 프론트엔드 (www)
 
-루트 → [../../CLAUDE.md](../../CLAUDE.md)
+루트 → [[CLAUDE|CLAUDE (루트)]] · 하네스 → [[_docs/harness|harness]]
 
 Next.js 프론트엔드.
 
@@ -12,6 +12,6 @@ Next.js 프론트엔드.
 
 | 문서 | 적용 시점 |
 | --- | --- |
-| [REACT_RULES.md](REACT_RULES.md) | `.tsx` / `.ts` / `.jsx` / `.js`를 작성·수정할 때 — 한 컴포넌트에 `useState`가 2개 이상이면 FormData 패턴 또는 단일 객체 패턴으로 자동 압축 |
+| [[www/_docs/REACT_RULES\|REACT_RULES]] | `.tsx` / `.ts` / `.jsx` / `.js`를 작성·수정할 때 — 한 컴포넌트에 `useState`가 2개 이상이면 FormData 패턴 또는 단일 객체 패턴으로 자동 압축 |
 
 규칙에 해당하면 자동으로 적용하고, 어떤 패턴을 적용했는지 한 줄로 명시한다. (사용자가 "useState 유지"를 명시적으로 요청한 경우 제외)
