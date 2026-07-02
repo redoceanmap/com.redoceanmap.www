@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Plus, MessageSquare, MapPin, Bookmark } from "lucide-react";
+import { Plus, MessageSquare, MapPin, Bookmark, Zap } from "lucide-react";
 import Wordmark from "./Wordmark";
+import EmailModal from "./EmailModal";
 import { useUIStore } from "@/lib/uiStore";
 import { clearStoredToken } from "@/lib/tokenStorage";
 
@@ -20,6 +22,7 @@ export default function TopNav() {
   const user = useUIStore((s) => s.user);
   const logoutStore = useUIStore((s) => s.logout);
   const logout = () => { clearStoredToken(); logoutStore(); };
+  const [emailOpen, setEmailOpen] = useState(false);
 
   if (pathname?.startsWith("/admin")) return null;
 
@@ -38,7 +41,17 @@ export default function TopNav() {
             {label}
           </Link>
         ))}
+        <button
+          type="button"
+          onClick={() => setEmailOpen(true)}
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm text-foreground/80 hover:bg-black/5 hover:text-foreground transition-colors"
+        >
+          <Zap size={15} strokeWidth={1.75} className="text-brand" />
+          자동화
+        </button>
       </nav>
+
+      <EmailModal open={emailOpen} onClose={() => setEmailOpen(false)} />
 
       <div className="ml-auto flex items-center gap-2">
         {user ? (
