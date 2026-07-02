@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { useChatStore } from "@/lib/store";
 import { Map as MapIcon } from "lucide-react";
+import StockCard from "@/components/seoul/StockCard";
 
 function PinMark({ size = 14 }: { size?: number }) {
   return (
@@ -55,6 +56,8 @@ export default function ChatView() {
               <p className="text-foreground leading-relaxed whitespace-pre-wrap">
                 {m.content}
               </p>
+
+              {m.stock && <StockCard stock={m.stock} />}
 
               {m.recommendations && m.recommendations.length > 0 && (
                 <>

@@ -25,6 +25,7 @@ const quickChips = [
   { icon: MapPin, label: "동네로 찾기", prompt: "성수동 상권 어때요?" },
   { icon: BarChart3, label: "상권 비교", prompt: "성수동이랑 연남동 비교해주세요" },
   { icon: Sparkles, label: "추천받기", prompt: "지금 가장 핫한 동네 추천해주세요" },
+  { icon: TrendingUp, label: "주식 물어보기", prompt: "삼성전자 주가 어때요?" },
 ];
 
 const trendingAreas = [
