@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Plus, MessageSquare, MapPin, Bookmark, Zap } from "lucide-react";
+import { Plus, MessageSquare, MapPin, Bookmark, Zap, ScanEye } from "lucide-react";
 import Wordmark from "./Wordmark";
 import EmailModal from "./EmailModal";
 import { useUIStore } from "@/lib/uiStore";
@@ -14,6 +14,7 @@ const navItems = [
   { icon: MessageSquare, label: "지난 대화", href: "/" },
   { icon: MapPin, label: "지도", href: "/map" },
   { icon: Bookmark, label: "찜한 곳", href: "/" },
+  { icon: ScanEye, label: "비전처리", href: "/vision" },
 ];
 
 export default function TopNav() {

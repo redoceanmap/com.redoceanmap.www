@@ -1,6 +1,6 @@
 # CLAUDE.md — 프론트엔드 (www)
 
-루트 → [[CLAUDE|CLAUDE (루트)]] · 하네스 → [[_docs/harness|harness]]
+루트 → [[CLAUDE|CLAUDE (루트)]]
 
 Next.js 프론트엔드.
 
